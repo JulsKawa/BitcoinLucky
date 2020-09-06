@@ -10,7 +10,7 @@ def gen_priv_key():
     my_adrr = privkey_to_address(my_private_key)
     print(my_pub_key)
     print(my_adrr)
-    r = requests.get(f'https://chain.api.btc.com/v3/address/{my_adrr}?_ga=2.241681924.748894143.1599323586-2084259633.1599323586')
+    r = requests.get(f'https://chain.api.btc.com/v3/address/{my_adrr}?')
     todos = json.loads(r.text)
     bal = todos.get('balance')
     if bal != None:
